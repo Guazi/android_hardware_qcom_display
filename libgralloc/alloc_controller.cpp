@@ -45,10 +45,12 @@
 #define VENUS_BUFFER_SIZE(args...) 0
 #endif
 
+namespace android {
+ANDROID_SINGLETON_STATIC_INSTANCE(AdrenoMemInfo);
+}
+
 using namespace gralloc;
 using namespace qdutils;
-
-ANDROID_SINGLETON_STATIC_INSTANCE(AdrenoMemInfo);
 
 //Common functions
 static bool canFallback(int usage, bool triedSystem)
